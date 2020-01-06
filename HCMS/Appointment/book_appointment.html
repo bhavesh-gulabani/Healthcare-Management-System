@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book Appointment</title>
+	<link rel="stylesheet" type="text/css" href="../css/insert-data-style.css">
+
+</head>
+<body>
+	<header>
+		<h1>New Patient Appointment</h1>
+	</header>
+
+	<div class="form-wrapper">
+		<form method="post" action="insert_appointment.py">
+			<div class="element">Appointment ID : <input type="number" name="appointment_id" min = "3300" max = "3399"></div><br>
+			<div class="element">Patient ID : <input type="number" name="pat_id" min = "1100" max = "1199" ></div><br>
+			<div class="element">Doctor ID : <input type="number" name="doc_id" min = "100" max = "999"></div><br>
+			<div class="element">Receptionist ID : <input type="number" name="rec_id" min = "100" max = "999"></div><br>
+			<div class="element">Time : <input type="time" name="Time" min = "08:00" max = "21:00"></div><br>
+			<div class="element">Date : <input type="date" name="Date"></div><br>
+			<input type="submit" value="Register!">
+			<input type="reset">
+
+		</form>
+		<a href="./appointment.html">Back</a>
+	</div>
+
+
+</body>
+</html>

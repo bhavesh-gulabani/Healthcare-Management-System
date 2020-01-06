@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Patient Record</title>
+	<link rel="stylesheet" type="text/css" href="../css/insert-data-style.css">
+
+</head>
+<body>
+	<header>
+		<h1>Patient Medical Record</h1>
+	</header>
+
+	<div class="form-wrapper">
+		<form method="post" action="insert_record.py">
+			<div class="element">Record no : <input type="number" name="record_no" min = "2200" max = "2299"></div><br>
+			<div class="element">Patient ID : <input type="number" name="pat_id" min = "1100" max = "1199"></div><br>
+			<div class="element">Doctor ID : <input type="number" name="doc_id" min = "100" max = "999"></div><br>
+			<div class="element">Date admitted : <input type="date" name="admission_date"></div><br>
+			<div class="element">Date discharged : <input type="date" name="discharge_date"></div><br>
+			<div class="element">Diagnosis : <input type="text" name="diagnosis" placeholder="Diagnosis"></div><br>
+			<input type="submit" value="Register!">
+			<input type="reset">
+
+		</form>
+		<a href="./medical_record.html">Back</a>
+	</div>
+
+
+</body>
+</html>
