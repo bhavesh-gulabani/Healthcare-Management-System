@@ -12,7 +12,7 @@
 	<div class="form-wrapper">
 		<form method="post" action="insert_patient.py">
 			<div class="element">Patient ID : <input type="number" name="pat_id"  min = "1100" max = "1199"></div><br>
-			<div class="element">Name : <input type="text" name="name" placeholder="Name" required pattern = "[a-zA-Z]+"></div><br>
+			<div class="element">Name : <input type="text" name="name" placeholder="Name" pattern = "[a-zA-Z]+"></div><br>
 			<div class="element">Gender:<br>
 			<input type="radio" name="gender" value="Male">Male<br>
 			<input type="radio" name="gender" value="Female">Female</div><br>
@@ -23,7 +23,6 @@
 
 			<input type="submit" value="Register!">
 			<input type="reset">
-
 		</form>
 	<div class="tailer">
 		<a href="../index.html">Back</a>

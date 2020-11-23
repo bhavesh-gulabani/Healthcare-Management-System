@@ -3,12 +3,12 @@ body {
 }
 
 h1{
-  background-color: #546780;
-  text-align: center;
-  color: #eff1f9;
-  margin: 0;
-  padding: 16px;
-  
+    background-color: #546780;
+    text-align: center;
+    color: #eff1f9;
+    margin: 0;
+    padding: 16px;
+    
 }
 
 .form-wrapper{
@@ -20,8 +20,8 @@ h1{
 }
 
 .form-wrapper form {
-  font-family: sans-serif;
-  font-size: 14px;
+    font-family: sans-serif;
+    font-size: 14px;
 }
 
 .form-wrapper input[type=submit],input[type=reset] {
@@ -37,12 +37,12 @@ h1{
 
 
 .form-wrapper input[type=text]{
-  font-size: 12px;
-  padding: 2px 6px;
+    font-size: 12px;
+    padding: 2px 6px;
 }
 
 a {
-  font-size: 16px;
-  text-decoration: none;
-  color: black;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
 }

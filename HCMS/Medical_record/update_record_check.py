@@ -1,4 +1,4 @@
-#!C:\Users\Bhavesh\AppData\Local\Programs\Python\Python37-32\python
+#!C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\python
 print("Content-type: text/html")
 print()
 
@@ -26,9 +26,9 @@ if len(record) == 1:
 	print('<body><header><h1>Patient Medical Record</h1></header>')
 	print('<div class="form-wrapper">')
 	print('<form method="post" action="update_record_execute.py">')
-	print('<div class="element">Record no : <input type="text" name="record_no" placeholder="Record_no" value="%s" ></div><br>'%(int(record_no)))
-	print('<div class="element">Patient ID : <input type="text" name="pat_id" placeholder="Patient ID" value="%s" ></div><br>'%(P_ID_record[0]))
-	print('<div class="element">Doctor ID : <input type="text" name="doc_id" placeholder="Doctor ID"></div><br>')
+	print('<div class="element">Record no : <input type="number" name="record_no" placeholder="Record_no" value="%s" min = "2200" max = "2299"></div><br>'%(int(record_no)))
+	print('<div class="element">Patient ID : <input type="number" name="pat_id" placeholder="Patient ID" value="%s" min = "1100" max = "1199"></div><br>'%(P_ID_record[0]))
+	print('<div class="element">Doctor ID : <input type="number" name="doc_id" placeholder="Doctor ID" min = "100" max = "999"></div><br>')
 	print('<div class="element">Date admitted : <input type="date" name="admission_date"></div><br>')
 	print('<div class="element">Date discharged : <input type="date" name="discharge_date"></div><br>')
 	print('<div class="element">Diagnosis : <input type="text" name="diagnosis" placeholder="Diagnosis"></div><br>')

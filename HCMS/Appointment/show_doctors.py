@@ -1,4 +1,4 @@
-#!C:\Users\Bhavesh\AppData\Local\Programs\Python\Python37-32\python
+#!C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\python
 print("Content-type: text/html")
 print()
 

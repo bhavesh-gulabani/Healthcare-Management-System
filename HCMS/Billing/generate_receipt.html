@@ -12,25 +12,22 @@
 
 	<div class="form-wrapper">
 		<form method="post" action="generate_receipt.py">
-			<div class="element">Receipt ID : <input type="number" name="receipt_id" min = "100" max = "999"></div><br>
-			<div class="element">Patient ID : <input type="number" name="pat_id" min = "1100" max = "1199"></div><br>
+			<div class="element">Receipt ID : <input type="number" name="receipt_id" min = "4401" max = "4499"></div><br>
+			<div class="element">Patient ID : <input type="number" name="pat_id" min = "1101" max = "1199"></div><br>
 			<div class="element">Mode of payment :
 			<!--<select>
   				<option value="Cash">Cash</option>
   				<option value="Debit Card">Debit Card</option>
  				<option value="Credit Card">Credit Card</option>
 			</select>-->
-			<input type="text" name="Mode_of_payment" placeholder="Mode of payment" required pattern = "[a-zA-Z]+"></div><br>
+			<input type="text" name="Mode_of_payment" placeholder="Mode of payment" pattern = "[a-zA-Z]+"></div><br>
 			<div class="element">Amount : <input type="number" name="Amount" min = "0"></div><br>
-			<div class="element">Status : <input type="text" name="Status" placeholder="Status" required pattern = "[a-zA-Z]+"></div><br>
+			<div class="element">Status : <input type="text" name="Status" placeholder="Status" pattern = "[a-zA-Z]+"></div><br>
 			<input type="submit" value="Generate!">
 			<input type="reset">
 
 		</form>
 		<a href="./billing.html">Back</a>
 	</div>
-
-
-
 </body>
 </html>

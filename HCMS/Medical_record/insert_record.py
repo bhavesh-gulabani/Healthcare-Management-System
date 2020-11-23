@@ -1,13 +1,35 @@
-#!C:\Users\Bhavesh\AppData\Local\Programs\Python\Python37-32\python
+#!C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\python
 print("Content-type: text/html")
 print()
 
 import cgi
 import mysql.connector as conn
+from Tests.TestCases import *
 
-form_data = cgi.FieldStorage()  #Fetches all the data from the form as a dictionary
+def printTestCaseResult(status, number):
+    print(f'<html><head><title>Generate Receipt</title><link rel="stylesheet" type="text/css" href="../css/successful-insert.css"></head>')
+    print(f'<body><header><h1>Test Case {number}</h1></header>')
+    print(f'<div class="message"><p> {status} </p><div class="previous"><a href="./medical_record.html">Back</a></div></div>')
+    print(f'</body>')
+    print(f'</html>')
 
+# Testing TC7 : The form fields appear empty when the page is loaded
+# try :
+#     MedicalRecordTest().testTC7()
+# except AssertionError:
+#     printTestCaseResult('Failed', 7)
+# else:
+#     printTestCaseResult('Passed', 7)
 
+# Testing TC8 : To check whether correct data is entered into the relevant fields/text boxes
+# try :
+#     MedicalRecordTest().testTC8()
+# except AssertionError:
+#     printTestCaseResult('Failed', 8)
+# else:
+#     printTestCaseResult('Passed', 8)
+
+form_data = cgi.FieldStorage()  
 record_no = form_data.getvalue('record_no')
 pat_id = form_data.getvalue('pat_id')
 doc_id = form_data.getvalue('doc_id')
@@ -53,6 +75,5 @@ else:
     print('<div class="message"><p> Successful!</p><div class="previous"><a href="./medical_record.html">Back</a></div></div>')
     print('</body>')
     print('</html>')
-
     cursor.close()
     cnx.close()
