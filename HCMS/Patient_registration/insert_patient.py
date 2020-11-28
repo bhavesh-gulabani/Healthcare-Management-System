@@ -13,7 +13,7 @@ def printTestCaseResult(status, number):
     print(f'</body>')
     print(f'</html>')
 
-# # Testing TC11 : The form fields appear empty when the page is loaded
+# Testing TC11 : The form fields appear empty when the page is loaded
 # try :
 #     PatientRegistrationTest().testTC11()
 # except AssertionError:

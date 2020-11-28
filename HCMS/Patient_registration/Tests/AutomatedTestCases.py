@@ -1,9 +1,12 @@
 import time
 import unittest
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 import cgi
 import mysql.connector as conn
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 # Test Case 11 : Patient Registration : 
 # The form fields appear empty when the page is loaded
@@ -35,28 +38,52 @@ def testCase12():
 		return True
 	return False
 
+# Helper function to navigate to Patient Registration Form
+def navigateToForm():
+	driver = webdriver.Chrome('D:/Bhavesh-Data/Engineering/BE/SEM-I/STQA/Mini Project/Mini Project 2/chromedriver')	
+	# Navigate to the URL
+	driver.get("http://127.0.0.1/HCMS/")
+	print(driver.title)
+	print(driver.current_url)
+	# Select Patient Registration Module
+	time.sleep(1)
+	driver.find_element_by_link_text('Register Patient').click()
+	time.sleep(1)
+	return driver
+
 class PatientRegistrationTest(unittest.TestCase):
 
 	def testTC11(self):
-	    self.assertTrue(testCase11())
-
-	def testTC12(self):
-		driver = webdriver.Chrome('D:/Bhavesh-Data/Engineering/BE/SEM-I/STQA/Mini Project/Mini Project 2/chromedriver')
-		# Navigate to the URL
-		driver.get("http://127.0.0.1/HCMS/Patient_registration/patient_registration.html")
-		print(driver.title)
-		print(driver.current_url)
-		# Enter the values in the text boxes
-		driver.find_element_by_name('pat_id').send_keys("1105")
-		driver.find_element_by_name('name').send_keys("Johnny")
-		driver.find_elements_by_css_selector("input[type='radio'][value='Male']")[0].click()
-		driver.find_element_by_name('DOB').send_keys("01011999")
-		driver.find_element_by_name('age').send_keys('20')
-		driver.find_element_by_name('email').send_keys('Johnny@gmail.com')
-		driver.find_element_by_name('address').send_keys('First street, New York')
+		driver = navigateToForm()
 		driver.find_element_by_name('pat_id').send_keys(Keys.RETURN)
-		# time.wait(2000)
-		self.assertTrue(testCase12())
+		self.assertTrue(testCase11())
+		time.sleep(3)
 		driver.close()
 
-PatientRegistrationTest().testTC12()
+	def testTC12(self):
+		driver = navigateToForm()
+
+		# Enter the values in the text boxes
+		driver.find_element_by_name('pat_id').send_keys("1103")
+		time.sleep(1)
+		driver.find_element_by_name('name').send_keys('Johnny')
+		time.sleep(1)
+		driver.find_elements_by_css_selector('input[type="radio"][value="Male"]')[0].click()
+		time.sleep(1)
+		driver.find_element_by_name('DOB').send_keys('01011999')
+		time.sleep(1)
+		driver.find_element_by_name('age').send_keys('20')
+		time.sleep(1)
+		driver.find_element_by_name('email').send_keys('Johnny@gmail.com')
+		time.sleep(1)
+		driver.find_element_by_name('address').send_keys('First Avenue, New York')
+		time.sleep(1)
+		driver.find_element_by_name('pat_id').send_keys(Keys.RETURN)
+		time.sleep(1)
+		self.assertTrue(testCase12())
+		time.sleep(3)
+		driver.close()
+
+# Method Calls
+# PatientRegistrationTest().testTC11()
+# PatientRegistrationTest().testTC12()
